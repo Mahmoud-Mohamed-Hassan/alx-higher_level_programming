@@ -4,7 +4,6 @@
 
 class Rectangle:
     """Rectangle(width, height)"""
-
     def __init__(self, width=0, height=0):
         """Rectangle __init__"""
         self.width = width
@@ -35,18 +34,19 @@ class Rectangle:
         self.__height = value
 
     def area(self):
-        return self.__width * self.__height
+        return (self.__width * self.__height)
 
     def perimeter(self):
         if self.__width == 0 or self.__height == 0:
-            return 0
-        return 2 * (self.__width + self.__height)
+            return (0)
+        return (2 * (self.__width + self.__height))
 
     def __str__(self):
-        string = ""
+        string=""
         if self.__width != 0 and self.__height != 0:
-            string += "\n".join("#" * self.__width for i in range(self__height))
-        return string
+            string += "\n".join("#" * self.__width 
+                                 )
+        return f"Rectangle({self.__width}, {self.__height})"
 
     def __repr__(self):
         return f"Rectangle({self.__width}, {self.__height})"
