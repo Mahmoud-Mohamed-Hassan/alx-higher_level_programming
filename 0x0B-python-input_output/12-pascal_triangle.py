@@ -10,7 +10,7 @@ def pascal_triangle(n):
         return []
 
     triangles_list = [[1]]
-    while len(trianngles_list) != n:
+    while len(triangles_list) != n:
         last_row = triangles_list[-1]
         temp = [1]
         for i in range(len(last_row) - 1):
@@ -18,3 +18,4 @@ def pascal_triangle(n):
         temp.append(1)
         triangles_list.append(temp)
     return triangles_list
+
